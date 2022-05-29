@@ -47,7 +47,7 @@ module.exports = function (app) {
         httpOnly: true,
         expires: cookieExpiresIn,
         sameSite: "none",
-        domain: "medicamentum.herokuapp.com",
+        domain: "avicenna-medicamentum.herokuapp.com",
       });
       res.cookie("user", JSON.stringify(response), {
         expires: cookieExpiresIn,
@@ -86,7 +86,7 @@ module.exports = function (app) {
           secure: true,
           httpOnly: true,
           expires: cookieExpiresIn,
-          domain: "medicamentum.herokuapp.com",
+          domain: "avicenna-medicamentum.herokuapp.com",
           sameSite: "none",
         });
         res.cookie("user", JSON.stringify(response), {
