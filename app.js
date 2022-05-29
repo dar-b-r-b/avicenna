@@ -26,6 +26,8 @@ const routes = [
   require("./api/compare"),
 ];
 
+app.set("trust proxy", 1);
+
 app.use(cors(corsConfig));
 app.use(express.json());
 app.use(cookieParser());
