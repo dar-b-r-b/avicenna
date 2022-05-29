@@ -46,6 +46,7 @@ module.exports = function (app) {
         secure: true,
         httpOnly: true,
         expires: cookieExpiresIn,
+        sameSite: "none",
       });
       res.cookie("user", JSON.stringify(response), {
         expires: cookieExpiresIn,
@@ -84,6 +85,7 @@ module.exports = function (app) {
           secure: true,
           httpOnly: true,
           expires: cookieExpiresIn,
+          sameSite: "none",
         });
         res.cookie("user", JSON.stringify(response), {
           expires: cookieExpiresIn,
