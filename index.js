@@ -3,6 +3,6 @@ const app = require("./app.js");
 const server = http.createServer(app);
 
 const { API_PORT } = process.env;
-const port = process.env.API_PORT;
+const port = process.env.PORT || process.env.API_PORT;
 
-server.listen();
+server.listen(port, () => {});
