@@ -32,6 +32,15 @@ app.use(cookieParser());
 
 enableLoginAPI(app);
 
+app.get("/healthz", (req, res) => {
+  res.json(1);
+});
+
+app.get("/healthz/db", async (req, res) => {
+  const userRepository = require("./domain/user/repository");
+  res.json(await userRepository.get());
+});
+
 app.use(auth);
 
 routes.forEach((r) => r(app));
