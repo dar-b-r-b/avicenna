@@ -44,7 +44,6 @@ module.exports = function (app) {
       const cookieExpiresIn = dayjs().add(1, "days").toDate();
       res.cookie("access-token", token, {
         secure: true,
-        httpOnly: true,
         expires: cookieExpiresIn,
         sameSite: "none",
       });
@@ -83,7 +82,6 @@ module.exports = function (app) {
         const cookieExpiresIn = dayjs().add(1, "days").toDate();
         res.cookie("access-token", token, {
           secure: true,
-          httpOnly: true,
           expires: cookieExpiresIn,
           sameSite: "none",
         });
