@@ -1,5 +1,5 @@
 module.exports = {
-  origin: "http://localhost:8080",
+  origin: "https://medicamentum.herokuapp.com/",
   credentials: true,
   optionSuccessStatus: 200,
 };
